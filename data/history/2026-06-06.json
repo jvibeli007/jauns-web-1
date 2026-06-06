@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06 18:16 Asia/Taipei",
+  "generatedAt": "2026-06-06 18:25 Asia/Taipei",
   "period": "2026-06-05 ~ 2026-06-06",
   "mode": "Daily Live Snapshot",
   "sourceStatus": "Live public sources collected successfully.",
@@ -19,7 +19,7 @@
             "CNBC: Tracking website, food watch: South Korea is obsessing over Nvidia CEO Jensen Huang's visit - CNBC",
             "Daily Gate City: Nvidia CEO Jensen Huang meets gaming superstar Faker during Seoul visit - Daily Gate City"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -38,7 +38,7 @@
           "id": "ai-infrastructure",
           "title": "AI 基礎設施 / AI infrastructure",
           "score": 99,
-          "summary": "今日公開來源中有 10 則相關訊號。",
+          "summary": "今日公開來源中有 9 則相關訊號。",
           "technology": [
             "ai",
             "gpu",
@@ -91,7 +91,7 @@
             "Nvidia CEO says robotics is South Korea's next big sector, points to 'some surprises' - Reuters",
             "Nvidia's Jensen Huang sees robotics as next major sector for S. Korea - upi.com",
             "\"NVIDIA Inside\": Jensen Huang and Nadella’s Latest Conversation — The Day Has Arrived When Truly Intelligent, Autonomous Assistants Can Run on PCs - 富途牛牛",
-            "Jensen Huang says 'every edge device will become autonomous' — Nvidia maps one computing pattern from the cloud to robotics - Tom's Hardware"
+            "Nvidia's Jensen Huang sees robotics as next major sector for S Korea - MSN"
           ]
         },
         {
@@ -123,7 +123,7 @@
             "The Motley Fool: Jensen Huang Just Said This AI Chip Stock Could Be the Next $1 Trillion Company (Hint: It's Not AMD or Sandisk) - The Motley Fool",
             "AOL.com: Jensen Huang Just Said This AI Chip Stock Could Be the Next $1 Trillion Company (Hint: It's Not AMD or Sandisk) - AOL.com"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -260,19 +260,19 @@
           "sourceType": "News RSS"
         },
         {
-          "title": "Jensen Huang shouts 'Everyone loves HBM' at Seoul barbecue as Nvidia announces Korea R&D center and previews four new products - digitimes",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZzBjZFlQdlpibTE5aUN0UXhHR1JaQ0lqY1lnWTVIUzQzRHVTaDBoVnFTcTNFMlRHTmZWUXkxc2RXWENaTl9QMjNIb3V0bUlVeEQtX0F3aHZIVDk5RWlkcTdERmlxSHFmbFNiRVR3LWNobUk3ajBQZXAwUkdxUkpkemhib1lyQ3FqZzNtaC1WTmU?oc=5",
-          "source": "digitimes",
-          "publishedAt": "2026-06-06T02:20:13.000Z",
-          "snippet": "Jensen Huang shouts 'Everyone loves HBM' at Seoul barbecue as Nvidia announces Korea R&D center and previews four new products &nbsp;&nbsp; digitimes",
-          "sourceType": "News RSS"
-        },
-        {
           "title": "Nvidia CEO mounts charm push in South Korea with TV talk show, baseball appearances - Reuters",
           "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZDBvcnl5YVlPakhERTRuQmIyMDlsWi15bF92TE13bGVvYkVtR3ZzSDQxZzV0Y3BSa2RuRFZKR2J0blo0NEw5bWFPSWVGTXJIM1cxSjdMQUxzdG8wZkFQOXVZTjc5bmwwMTJ2MWMzQzZQZVNrcUQ2OFQwMF9yRG9ndDU2UDJrS0NKYkdaMmhJUXYtQmVvQkJGU0tseHpRajgtUlFSa0hXZ1VpaHhxd3dSWUlUSENuVWRJVDkyRUNIcV9KRmdtZVJDNUphZ2VZb1E?oc=5",
           "source": "Reuters",
           "publishedAt": "2026-06-04T23:00:31.000Z",
           "snippet": "Nvidia CEO mounts charm push in South Korea with TV talk show, baseball appearances &nbsp;&nbsp; Reuters",
+          "sourceType": "News RSS"
+        },
+        {
+          "title": "Jensen Huang shouts 'Everyone loves HBM' at Seoul barbecue as Nvidia announces Korea R&D center and previews four new products - digitimes",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZzBjZFlQdlpibTE5aUN0UXhHR1JaQ0lqY1lnWTVIUzQzRHVTaDBoVnFTcTNFMlRHTmZWUXkxc2RXWENaTl9QMjNIb3V0bUlVeEQtX0F3aHZIVDk5RWlkcTdERmlxSHFmbFNiRVR3LWNobUk3ajBQZXAwUkdxUkpkemhib1lyQ3FqZzNtaC1WTmU?oc=5",
+          "source": "digitimes",
+          "publishedAt": "2026-06-06T02:20:13.000Z",
+          "snippet": "Jensen Huang shouts 'Everyone loves HBM' at Seoul barbecue as Nvidia announces Korea R&D center and previews four new products &nbsp;&nbsp; digitimes",
           "sourceType": "News RSS"
         },
         {
@@ -305,6 +305,14 @@
           "source": "Business Insider",
           "publishedAt": "2026-06-05T06:15:00.000Z",
           "snippet": "Why Jensen Huang is going on a charm offensive in South Korea &nbsp;&nbsp; Business Insider",
+          "sourceType": "News RSS"
+        },
+        {
+          "title": "Nvidia's Jensen Huang sees robotics as next major sector for S Korea - MSN",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdkllejhHYXB2YXlwbVFJMTNWR0Y1YllXU3I0WGZ2UU14d05VX0t4QXJfVVdrOGN5Vk1NTGZEaGNSU3lUSm51bzVBVC0tNnhvb29qeXppdUtHaHA2eHhhb0VxSG1GUE1ja1RaTzFPeDdvWTRTRkphRzE1MHY4WlJURGNLZFpIOG9pU3RXdTFQaFVOR05GRFhxUzd6c21JZHUyanVXOXRoN09lb3N2cWFaaWt3Y3FTZkRH?oc=5",
+          "source": "MSN",
+          "publishedAt": "2026-06-06T05:26:41.000Z",
+          "snippet": "Nvidia's Jensen Huang sees robotics as next major sector for S Korea &nbsp;&nbsp; MSN",
           "sourceType": "News RSS"
         },
         {
@@ -362,14 +370,6 @@
           "publishedAt": "2026-06-06T03:20:47.000Z",
           "snippet": "Jensen Huang Just Said This AI Chip Stock Could Be the Next $1 Trillion Company (Hint: It's Not AMD or Sandisk) &nbsp;&nbsp; AOL.com",
           "sourceType": "News RSS"
-        },
-        {
-          "title": "Jensen Huang says 'every edge device will become autonomous' — Nvidia maps one computing pattern from the cloud to robotics - Tom's Hardware",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPR0pKVUdidE9NQXBuLVI0UFJQUkJWdFk0RUxxdTgwdndtOXF2SW5qX1QxT2J4dWpDeWVLaVpNN0VfNGRjVkpLVTQ2YzJhT3E1bWwxTElGa054T29adnBRTHhZay1jQjdzTE9HdXN0ZjV3X2NURUxvM25QcVl6cVZwaEU5MGNGSExSWUd0ajhLZEZkUEtDNXdRWGlGZUhvZThRTlFj?oc=5",
-          "source": "Tom's Hardware",
-          "publishedAt": "2026-06-05T11:00:00.000Z",
-          "snippet": "Jensen Huang says 'every edge device will become autonomous' — Nvidia maps one computing pattern from the cloud to robotics &nbsp;&nbsp; Tom's Hardware",
-          "sourceType": "News RSS"
         }
       ]
     },
@@ -388,7 +388,7 @@
             "MSN: Analysis - In China, AMD CEO Lisa Su is understated while Nvidia's Huang is more razzmatazz - MSN",
             "24/7 Wall St.: AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - 24/7 Wall St."
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -407,7 +407,7 @@
           "id": "ai-infrastructure",
           "title": "AI 基礎設施 / AI infrastructure",
           "score": 99,
-          "summary": "今日公開來源中有 8 則相關訊號。",
+          "summary": "今日公開來源中有 7 則相關訊號。",
           "technology": [
             "ai",
             "gpu",
@@ -419,8 +419,8 @@
           "sources": [
             "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - 24/7 Wall St.",
             "2 CEOs, 1 AI empire: Why Jensen Huang and Lisa Su are on a collision course - MSN",
-            "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN",
-            "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - AOL.com"
+            "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - AOL.com",
+            "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN"
           ]
         },
         {
@@ -439,8 +439,8 @@
           "sources": [
             "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - 24/7 Wall St.",
             "AMD’s market cap soars past $750B for first time — CEO Lisa Su expects CPU market to grow 35% annually over next 5 years - MSN",
-            "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN",
-            "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - AOL.com"
+            "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - AOL.com",
+            "$20 Billion: Inside Nvidia’s VERA CPU Bet to Break the Intel-AMD Duopoly - 24/7 Wall St."
           ]
         },
         {
@@ -492,7 +492,7 @@
             "MSN: Analysis - In China, AMD CEO Lisa Su is understated while Nvidia's Huang is more razzmatazz - MSN",
             "24/7 Wall St.: $20 Billion: Inside Nvidia’s VERA CPU Bet to Break the Intel-AMD Duopoly - 24/7 Wall St."
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -508,7 +508,7 @@
             "24/7 Wall St.: $20 Billion: Inside Nvidia’s VERA CPU Bet to Break the Intel-AMD Duopoly - 24/7 Wall St.",
             "asatunews.co.id: AMD and Intel Fight for AI Dominance as Stock Prices Stretch - asatunews.co.id"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -523,7 +523,7 @@
             "Mix Vale: Microsoft accelerates production of new Xbox with AMD processor to ensure launch in 2027 - Mix Vale",
             "Mix Vale: Microsoft and AMD prepare the launch of the new generation of Xbox for 2027 with a focus on artificial int ... - Mix Vale"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -537,7 +537,7 @@
           "occasions": [
             "asatunews.co.id: Invesco PHLX Semiconductor ETF Surges 94 Percent Driven by AI Chip Demand - asatunews.co.id"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -618,14 +618,6 @@
           "sourceType": "News RSS"
         },
         {
-          "title": "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcXhPTWl6UmlKTzhtUW5ibVlpMzBXSjRsa3d0d2c4TUJjY0dGZk1EeGE4Ui1saDBPcnhSR2l4eFJCMlQyOG5rQ0picDgxcGhiOXBVYnJrbDQ2WE5TT1dYVUtDQ3NYelhTeVU1ZFBIMjRuYW1VU0swOFNZakIta3A5Q1BWVUVZeUp3alQwZGFRd0lBSjM5QXlYd0RCTUpfdDhMR3BlQnU2Q3kzOXc4X3ZtT1hCQ05CZ2ZwRm1iMlE2ek9xeEtCSWpMTDRURGlLREljSVE?oc=5",
-          "source": "MSN",
-          "publishedAt": "2026-06-04T14:28:21.000Z",
-          "snippet": "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader &nbsp;&nbsp; MSN",
-          "sourceType": "News RSS"
-        },
-        {
           "title": "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - AOL.com",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE80Q3lqSXRIQzdRVXN4N1FtcGM3alFnejRsYjNtUmpUOUVWdDNCUTRrcnUtaWtjMDZ5WlItd2xxSllJa05Vem9OQnhYb3RHZUZ5d0RBdXVFOGZJNHRWd0g2SHM4YnBDWS1BNUVWVnBRM0hwQQ?oc=5",
           "source": "AOL.com",
@@ -647,6 +639,14 @@
           "source": "24/7 Wall St.",
           "publishedAt": "2026-06-04T13:29:30.000Z",
           "snippet": "$20 Billion: Inside Nvidia’s VERA CPU Bet to Break the Intel-AMD Duopoly &nbsp;&nbsp; 24/7 Wall St.",
+          "sourceType": "News RSS"
+        },
+        {
+          "title": "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNcGN6bU1SbjdjYmcyTW1ialdvUnBUeUVUV3RUU19TbXJ3d3FsTjNhMHpvaHlaQmRDYmZxRDRldmN2eXkya1Zqb1FZaThyYThLR1JucHJZNlpvSTNtRjVDTlNfSnkwc3pTM1FubnVYUEhpMDZqaTZVQUJPTkdVUmwwWlhqQm5HZEk3RVdMZ3BfSHBFRloxTEc5c1hCYVltZG5WaHItdUlJaEpveUF4YUNpZnpINU5kX05UR2t0SlRienA1UnAzQ25QUFpxMXcwbzVMVkMtQ2Zsdzk3YUpYTTBmb3VoUG9MWTZlQTkzYS1kSFhUSERm?oc=5",
+          "source": "MSN",
+          "publishedAt": "2026-06-04T13:59:15.000Z",
+          "snippet": "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader &nbsp;&nbsp; MSN",
           "sourceType": "News RSS"
         },
         {
@@ -695,14 +695,6 @@
           "source": "Mix Vale",
           "publishedAt": "2026-06-06T00:11:27.000Z",
           "snippet": "Microsoft and AMD prepare the launch of the new generation of Xbox for 2027 with a focus on artificial int ... &nbsp;&nbsp; Mix Vale",
-          "sourceType": "News RSS"
-        },
-        {
-          "title": "AMD Stock Surges in Focus After 12,941% Gain Since 2016 – But 204x P/E Raises Risk - Meyka",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU0kyYVNGRXh0bWNmVS1lVFFTckZYanNXUkZGMTA0VlRkQXM4MjNlSk1mZTNBbmpyaGJlYm9jVUQ0b0JIZDdOWER5cEdKdW96UDROVVh0M0R3aW10Q3ktRHJxRjN4ZWlncWo5WEZKZm0zd1RfX05pNktUUzdleXZvRW5UZ0lqNGk1THBTOUppQTFobnR5MWRlMGo5TDFjQnBvUU4weEl4czJHaFU?oc=5",
-          "source": "Meyka",
-          "publishedAt": "2026-06-05T09:34:55.000Z",
-          "snippet": "AMD Stock Surges in Focus After 12,941% Gain Since 2016 – But 204x P/E Raises Risk &nbsp;&nbsp; Meyka",
           "sourceType": "News RSS"
         },
         {
@@ -784,6 +776,14 @@
           "publishedAt": "2026-06-04T16:27:04.000Z",
           "snippet": "Meet Texas' wealthiest self-made women of 2026, according to Forbes &nbsp;&nbsp; Houston Chronicle",
           "sourceType": "News RSS"
+        },
+        {
+          "title": "VTI Stock Falls 1.5% as AMD Plunges 7.1% - SSBCrack",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE41MEh4X19qdDk5bVRua3lqZnkzNEhDbWJpLWpOUVZDaDhfRnhPNE1TclV3UGw0ckJFVXlxZElZTDkxQnowRXBOVXQzOHJmNzFkZEo0Mm1ENzFTUkQ1OFllT0I2SmdINlM0ZkJBSVlPM0dDcUE?oc=5",
+          "source": "SSBCrack",
+          "publishedAt": "2026-06-05T19:37:16.000Z",
+          "snippet": "VTI Stock Falls 1.5% as AMD Plunges 7.1% &nbsp;&nbsp; SSBCrack",
+          "sourceType": "News RSS"
         }
       ]
     },
@@ -802,7 +802,7 @@
             "qz.com: SoftBank's Masayoshi Son says AI is already designing OpenAI's next model - qz.com",
             "Forbes: Billionaire Masayoshi Son’s Fortune Cut By $13 Billion—No Longer Asia’s Richest - Forbes"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -868,7 +868,7 @@
             "qz.com: SoftBank's Masayoshi Son says AI is already designing OpenAI's next model - qz.com",
             "India Today: AI is designing OpenAI's next model, says SoftBank CEO amid Anthropic's call for AI slowdown - India Today"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -882,7 +882,7 @@
           "occasions": [
             "India Today: AI is designing OpenAI's next model, says SoftBank CEO amid Anthropic's call for AI slowdown - India Today"
           ],
-          "first": true,
+          "first": false,
           "sourceTypes": [
             "News RSS"
           ],
@@ -1223,16 +1223,16 @@
       "publishedAt": "2026-06-06T02:27:00.000Z"
     },
     {
-      "title": "Jensen Huang shouts 'Everyone loves HBM' at Seoul barbecue as Nvidia announces Korea R&D center and previews four new products - digitimes",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZzBjZFlQdlpibTE5aUN0UXhHR1JaQ0lqY1lnWTVIUzQzRHVTaDBoVnFTcTNFMlRHTmZWUXkxc2RXWENaTl9QMjNIb3V0bUlVeEQtX0F3aHZIVDk5RWlkcTdERmlxSHFmbFNiRVR3LWNobUk3ajBQZXAwUkdxUkpkemhib1lyQ3FqZzNtaC1WTmU?oc=5",
-      "source": "digitimes",
-      "publishedAt": "2026-06-06T02:20:13.000Z"
-    },
-    {
       "title": "Nvidia CEO mounts charm push in South Korea with TV talk show, baseball appearances - Reuters",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZDBvcnl5YVlPakhERTRuQmIyMDlsWi15bF92TE13bGVvYkVtR3ZzSDQxZzV0Y3BSa2RuRFZKR2J0blo0NEw5bWFPSWVGTXJIM1cxSjdMQUxzdG8wZkFQOXVZTjc5bmwwMTJ2MWMzQzZQZVNrcUQ2OFQwMF9yRG9ndDU2UDJrS0NKYkdaMmhJUXYtQmVvQkJGU0tseHpRajgtUlFSa0hXZ1VpaHhxd3dSWUlUSENuVWRJVDkyRUNIcV9KRmdtZVJDNUphZ2VZb1E?oc=5",
       "source": "Reuters",
       "publishedAt": "2026-06-04T23:00:31.000Z"
+    },
+    {
+      "title": "Jensen Huang shouts 'Everyone loves HBM' at Seoul barbecue as Nvidia announces Korea R&D center and previews four new products - digitimes",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZzBjZFlQdlpibTE5aUN0UXhHR1JaQ0lqY1lnWTVIUzQzRHVTaDBoVnFTcTNFMlRHTmZWUXkxc2RXWENaTl9QMjNIb3V0bUlVeEQtX0F3aHZIVDk5RWlkcTdERmlxSHFmbFNiRVR3LWNobUk3ajBQZXAwUkdxUkpkemhib1lyQ3FqZzNtaC1WTmU?oc=5",
+      "source": "digitimes",
+      "publishedAt": "2026-06-06T02:20:13.000Z"
     },
     {
       "title": "Jensen Huang Just Made a Massive Promise to Nvidia Investors - Yahoo Finance",
@@ -1257,6 +1257,12 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUmxDcUk0S2lsZEJJQ01OeVhxMEVFX1VWbURvRDE1ODBTdncwS0FEdGcwODN5aVFIOW41REdGbC1RZWZrWkJVTjFsTE8wdW02SnNLZm1jTjNZdzM1emczNkpRX0NXOFhrYlM4UXhnVHRSVV84c1UzRl9VT18wQWJLejJoUlJnZ2twcHBCbW5BSHl5X09fX1NTU2pVLXc?oc=5",
       "source": "Business Insider",
       "publishedAt": "2026-06-05T06:15:00.000Z"
+    },
+    {
+      "title": "Nvidia's Jensen Huang sees robotics as next major sector for S Korea - MSN",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdkllejhHYXB2YXlwbVFJMTNWR0Y1YllXU3I0WGZ2UU14d05VX0t4QXJfVVdrOGN5Vk1NTGZEaGNSU3lUSm51bzVBVC0tNnhvb29qeXppdUtHaHA2eHhhb0VxSG1GUE1ja1RaTzFPeDdvWTRTRkphRzE1MHY4WlJURGNLZFpIOG9pU3RXdTFQaFVOR05GRFhxUzd6c21JZHUyanVXOXRoN09lb3N2cWFaaWt3Y3FTZkRH?oc=5",
+      "source": "MSN",
+      "publishedAt": "2026-06-06T05:26:41.000Z"
     },
     {
       "title": "Nvidia's Jensen Huang Dances to 'Golden' on Korean Variety Show - Seoul Economic Daily",
@@ -1299,12 +1305,6 @@
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1tc1BNX19KSUN0eHAxbl9EMU5XSEJERmVWcnUzN2dfbE1SbElMSzk5VU80UzZUTzQ3bVVNVWVzeFNlc0F0ZW1QUVhDSnA4TjFTTFBzaVdjZ2g0OGZZSWlac3drNHJ0QWNMU01abnE1TG1QM3llV1loZA?oc=5",
       "source": "AOL.com",
       "publishedAt": "2026-06-06T03:20:47.000Z"
-    },
-    {
-      "title": "Jensen Huang says 'every edge device will become autonomous' — Nvidia maps one computing pattern from the cloud to robotics - Tom's Hardware",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPR0pKVUdidE9NQXBuLVI0UFJQUkJWdFk0RUxxdTgwdndtOXF2SW5qX1QxT2J4dWpDeWVLaVpNN0VfNGRjVkpLVTQ2YzJhT3E1bWwxTElGa054T29adnBRTHhZay1jQjdzTE9HdXN0ZjV3X2NURUxvM25QcVl6cVZwaEU5MGNGSExSWUd0ajhLZEZkUEtDNXdRWGlGZUhvZThRTlFj?oc=5",
-      "source": "Tom's Hardware",
-      "publishedAt": "2026-06-05T11:00:00.000Z"
     },
     {
       "title": "AMD Q1 2026 EARNINGS LIVE | LISA SU SPEAKS Secret Service Dhs Separation Bill (K8rGlMg44U) - Mshale",
@@ -1361,12 +1361,6 @@
       "publishedAt": "2026-06-05T16:05:44.000Z"
     },
     {
-      "title": "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcXhPTWl6UmlKTzhtUW5ibVlpMzBXSjRsa3d0d2c4TUJjY0dGZk1EeGE4Ui1saDBPcnhSR2l4eFJCMlQyOG5rQ0picDgxcGhiOXBVYnJrbDQ2WE5TT1dYVUtDQ3NYelhTeVU1ZFBIMjRuYW1VU0swOFNZakIta3A5Q1BWVUVZeUp3alQwZGFRd0lBSjM5QXlYd0RCTUpfdDhMR3BlQnU2Q3kzOXc4X3ZtT1hCQ05CZ2ZwRm1iMlE2ek9xeEtCSWpMTDRURGlLREljSVE?oc=5",
-      "source": "MSN",
-      "publishedAt": "2026-06-04T14:28:21.000Z"
-    },
-    {
       "title": "AMD’s $130,000 Decade: U.S. Chipmaker Rises from Near-Bankruptcy to AI Leader - AOL.com",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE80Q3lqSXRIQzdRVXN4N1FtcGM3alFnejRsYjNtUmpUOUVWdDNCUTRrcnUtaWtjMDZ5WlItd2xxSllJa05Vem9OQnhYb3RHZUZ5d0RBdXVFOGZJNHRWd0g2SHM4YnBDWS1BNUVWVnBRM0hwQQ?oc=5",
       "source": "AOL.com",
@@ -1383,6 +1377,12 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEpIMDBSMVRrd3JuZkJEVFYxYWxmX2hSLUFCTFZqRGRXLWhvd1VUOXpzb2gtTlY5TmgtSXNRWVBtQVk0ejBpcXVSNjhjZ2dnUC1WVlRxSXY4LVVfZnQ3d3M1N09IZkNQNG1LX2hPZGk4dWJxTFRpQ1U3cGNYSkJ5bUxWOEx3NnE2VFhjY0Z6MXV6LS1DR3dpNnhIZUJlcms1QjhLTmY2YXB5dTlCV1dkeC1NNA?oc=5",
       "source": "24/7 Wall St.",
       "publishedAt": "2026-06-04T13:29:30.000Z"
+    },
+    {
+      "title": "AMD’s $130,000 decade: US chipmaker rises from near-bankruptcy to AI leader - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNcGN6bU1SbjdjYmcyTW1ialdvUnBUeUVUV3RUU19TbXJ3d3FsTjNhMHpvaHlaQmRDYmZxRDRldmN2eXkya1Zqb1FZaThyYThLR1JucHJZNlpvSTNtRjVDTlNfSnkwc3pTM1FubnVYUEhpMDZqaTZVQUJPTkdVUmwwWlhqQm5HZEk3RVdMZ3BfSHBFRloxTEc5c1hCYVltZG5WaHItdUlJaEpveUF4YUNpZnpINU5kX05UR2t0SlRienA1UnAzQ25QUFpxMXcwbzVMVkMtQ2Zsdzk3YUpYTTBmb3VoUG9MWTZlQTkzYS1kSFhUSERm?oc=5",
+      "source": "MSN",
+      "publishedAt": "2026-06-04T13:59:15.000Z"
     },
     {
       "title": "AMD CEO confirms chip advancement for next generation Xbox expected to debut in 2027 - Mix Vale",
@@ -1419,12 +1419,6 @@
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPc0Jia2lTM1lsVUNGNWw4WmlRSmo5OHdmbTFiZFBSRkhiMTNFSUtvcGhkVy1iMTdMYzh1R05pdXdIcHFtM3ZIeWYyVWM5VVBKTHJwSUExcWRkOHpOelZlSGNucnZXMDRYaXF1VU1OUG5hTmFMOVBLREdXbFVOQlV4NEtLbHFCdnBQQUZHZnpZSEdXYlJEMFpOSTM4MFFwWkU2Qk1yc3RPcGpYVDBPQVoyRmtqN0ZqTXRBSGF0RXpaRXZMcmRzZ1JucUlPam53bVZJa1AtbjNVSnFPWDZITkdkUm05SmJxUHJPcVd5bGhB0gHzAUFVX3lxTFBBMjNmUVhJa3ZkS3lxd3hlZHpHenlnWGkwb3RCbWgzeklqZ3NFMWh4Zjc2MENSbDluMHMxbzV3Znp6b2JaTFhIcWg2a1hseFFhaU1zdTdRVWQ5RW1jbk9wb2diZUhtQnAxS2w2Tnpsa0dacnFwdWxwSjB1Y2xqQVpibkZoSXRxQlZEaklpcG1lQzBoMm4wcm8tUzZScFhVTHdCdWRZYy1LYkVxb0cyODVDTHFBNTFsT2ExX09USUhlYk1WMW1xME54eUVVb1gyRTAwOFRNZkhCaFlzV25oTVltM1RQZlh1UkZ3OHdzM2pFaE9hUQ?oc=5",
       "source": "Mix Vale",
       "publishedAt": "2026-06-06T00:11:27.000Z"
-    },
-    {
-      "title": "AMD Stock Surges in Focus After 12,941% Gain Since 2016 – But 204x P/E Raises Risk - Meyka",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU0kyYVNGRXh0bWNmVS1lVFFTckZYanNXUkZGMTA0VlRkQXM4MjNlSk1mZTNBbmpyaGJlYm9jVUQ0b0JIZDdOWER5cEdKdW96UDROVVh0M0R3aW10Q3ktRHJxRjN4ZWlncWo5WEZKZm0zd1RfX05pNktUUzdleXZvRW5UZ0lqNGk1THBTOUppQTFobnR5MWRlMGo5TDFjQnBvUU4weEl4czJHaFU?oc=5",
-      "source": "Meyka",
-      "publishedAt": "2026-06-05T09:34:55.000Z"
     },
     {
       "title": "AMD and Intel Fight for AI Dominance as Stock Prices Stretch - asatunews.co.id",
@@ -1485,6 +1479,12 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWFh3Z081WnpLU3lHZmtOVHdtRUtWNDBONUdfZ2xsN0N3M0ZFUWFWZDIyOTVDUllubXJKc2x3VXQ1WktITnFiSVV1SXdVc1NYQkt6MkhRTk9raFJZcGZzYUdqYkFDWkhic1N4LUx4Z2Fjc2RYVHJzUXFvaEtJbUxfOURNdGhwYnNvN1JFNW1zcDhGbzd5TTNxQ3F2TEg?oc=5",
       "source": "Houston Chronicle",
       "publishedAt": "2026-06-04T16:27:04.000Z"
+    },
+    {
+      "title": "VTI Stock Falls 1.5% as AMD Plunges 7.1% - SSBCrack",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE41MEh4X19qdDk5bVRua3lqZnkzNEhDbWJpLWpOUVZDaDhfRnhPNE1TclV3UGw0ckJFVXlxZElZTDkxQnowRXBOVXQzOHJmNzFkZEo0Mm1ENzFTUkQ1OFllT0I2SmdINlM0ZkJBSVlPM0dDcUE?oc=5",
+      "source": "SSBCrack",
+      "publishedAt": "2026-06-05T19:37:16.000Z"
     },
     {
       "title": "AI is designing OpenAI's next model in a sign of 'superintelligence': SoftBank's Masayoshi Son to CNBC - CNBC",
