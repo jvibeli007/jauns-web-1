@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>名人新趨勢及夥伴財務追蹤-2</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <div class="badges">
+          <span class="badge success">Version 2</span>
+          <span class="badge" id="snapshotMode">Loading</span>
+          <span class="badge" id="generatedAt">Loading</span>
+        </div>
+        <h1>名人新趨勢及夥伴財務追蹤-2</h1>
+        <p>
+          第二版獨立環境。需要時手動抓取公開新聞訊號，整理名人相關的新趨勢、合作夥伴、提及次數、首次出現標記與來源證據。
+        </p>
+      </div>
+      <div class="control-panel">
+        <label>
+          追蹤對象
+          <select id="celebritySelect"></select>
+        </label>
+        <label>
+          Snapshot period
+          <input id="periodInput" readonly />
+        </label>
+      </div>
+    </section>
+
+    <section class="notice" id="sourceStatus"></section>
+
+    <section class="metrics" id="metrics"></section>
+
+    <section class="split">
+      <article class="panel">
+        <div class="panel-head">
+          <span class="icon">5P</span>
+          <div>
+            <h2>Daily Snapshot 5P</h2>
+            <p>每次更新後的資料會被整理成可快速判斷的五個視角。</p>
+          </div>
+        </div>
+        <div class="five-p" id="fiveP"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <span class="icon">↗</span>
+          <div>
+            <h2>Snapshot 摘要</h2>
+            <p>根據最新公開來源產生的重點描述。</p>
+          </div>
+        </div>
+        <div id="summary"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span class="icon">T</span>
+        <div>
+          <h2>新趨勢內容 summary</h2>
+          <p>依關鍵訊號分群，包含技術、影響與來源標題。</p>
+        </div>
+      </div>
+      <div class="trend-layout">
+        <div class="trend-list" id="trendList"></div>
+        <div class="trend-detail" id="trendDetail"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span class="icon">P</span>
+        <div>
+          <h2>合作夥伴 tablelist</h2>
+          <p>顯示外部關聯公司、合作摘要、提及次數、來源場合與首次出現標記；主體公司訊號會保留在摘要區。</p>
+        </div>
+      </div>
+      <div class="filters">
+        <input id="partnerSearch" placeholder="搜尋外部 partner / trend / cooperation" />
+        <select id="sourceFilter">
+          <option value="All">All sources</option>
+        </select>
+        <button id="firstOnly" type="button">只看首次</button>
+      </div>
+      <div class="bar-chart" id="barChart"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Partner</th>
+              <th>合作內容 summary</th>
+              <th>提及</th>
+              <th>不同場合</th>
+              <th>首次</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody id="partnerBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span class="icon">B</span>
+        <div>
+          <h2>Partner / competitor Bot</h2>
+          <p>本地 snapshot 問答，會根據最新 snapshot 回答 partner、趨勢、來源與首次出現。</p>
+        </div>
+      </div>
+      <div class="bot-grid">
+        <div>
+          <div class="chat" id="chat"></div>
+          <div class="askbar">
+            <input id="askInput" value="今天最高分趨勢是什麼？" />
+            <button id="askBtn" type="button">Ask</button>
+          </div>
+        </div>
+        <aside>
+          <h3>快速問題</h3>
+          <div class="quick" id="quickQuestions"></div>
+          <div class="note">
+            這個 Bot 是本地規則型問答。正式版可以把這層替換成 RAG，接新聞全文、財報、市場資料與公司資料庫。
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span class="icon">S</span>
+        <div>
+          <h2>資料來源</h2>
+          <p>每次抓取後保留下來的來源證據。</p>
+        </div>
+      </div>
+      <div class="source-grid" id="sources"></div>
+    </section>
+  </main>
+  <script src="assets/app.js" type="module"></script>
+</body>
+</html>
