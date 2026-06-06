@@ -1,0 +1,25 @@
+{
+  "celebrities": [
+    {
+      "id": "jensen-huang",
+      "name": "Jensen Huang",
+      "localName": "黃仁勳",
+      "company": "NVIDIA",
+      "aliases": ["Jensen Huang", "黃仁勳", "NVIDIA CEO"]
+    },
+    {
+      "id": "lisa-su",
+      "name": "Lisa Su",
+      "localName": "蘇姿丰",
+      "company": "AMD",
+      "aliases": ["Lisa Su", "蘇姿丰", "AMD CEO"]
+    },
+    {
+      "id": "masayoshi-son",
+      "name": "Masayoshi Son",
+      "localName": "孫正義",
+      "company": "SoftBank",
+      "aliases": ["Masayoshi Son", "孫正義", "SoftBank CEO"]
+    }
+  ]
+}
