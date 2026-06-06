@@ -1,0 +1,14 @@
+{
+  "name": "celebrity-partner-finance-tracker-2",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update-snapshot.mjs",
+    "update:offline": "node scripts/update-snapshot.mjs --offline",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
