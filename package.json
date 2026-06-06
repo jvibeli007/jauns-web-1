@@ -1,6 +1,7 @@
 {
   "name": "celebrity-partner-finance-tracker-2",
   "version": "1.0.0",
+  "description": "Independent GitHub Pages app for celebrity trend and partner finance tracking version 2.",
   "private": true,
   "type": "module",
   "scripts": {
