@@ -3,9 +3,13 @@ const state = {
   selectedCelebrityId: null,
   selectedTrendId: null,
   firstOnly: false,
+  isUpdating: false,
+  sourceMessage: "",
+  recentTargets: [],
   messages: []
 };
 
+const recentTargetsKey = "celebrity-tracker-recent-targets";
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&": "&amp;",
@@ -19,6 +23,7 @@ init();
 
 async function init() {
   state.snapshot = await loadSnapshot();
+  state.recentTargets = loadRecentTargets();
   state.selectedCelebrityId = state.snapshot.celebrities[0]?.id;
   state.messages = [{ role: "bot", text: "你可以問：今天最高分趨勢、誰是首次出現、某 partner 出現在哪些來源、或有哪些資料來源。" }];
 
@@ -35,6 +40,7 @@ async function loadSnapshot() {
     return {
       generatedAt: "Not generated yet",
       period: "N/A",
+      lookbackDays: 2,
       mode: "Local empty state",
       sourceStatus: `尚未讀到 data/snapshot.json：${error.message}`,
       celebrities: [{
@@ -59,6 +65,10 @@ function bindEvents() {
     state.selectedTrendId = null;
     renderAll();
   });
+  $("updateBtn").addEventListener("click", updateSnapshot);
+  $("targetInput").addEventListener("keydown", event => {
+    if (event.key === "Enter") updateSnapshot();
+  });
   $("partnerSearch").addEventListener("input", renderPartners);
   $("sourceFilter").addEventListener("change", renderPartners);
   $("firstOnly").addEventListener("click", () => {
@@ -79,8 +89,11 @@ function renderAll() {
   $("snapshotMode").textContent = state.snapshot.mode || "Snapshot";
   $("generatedAt").textContent = state.snapshot.generatedAt || "";
   $("periodInput").value = state.snapshot.period || "";
-  $("sourceStatus").textContent = state.snapshot.sourceStatus || "Snapshot loaded.";
+  $("daysInput").value = state.snapshot.lookbackDays || $("daysInput").value || 2;
+  $("sourceStatus").textContent = state.sourceMessage || state.snapshot.sourceStatus || "Snapshot loaded.";
 
+  renderTrackingInputs();
+  renderRecentTargets();
   renderCelebritySelect();
   renderMetrics();
   renderFiveP();
@@ -93,14 +106,120 @@ function renderAll() {
   renderSources();
 }
 
+function renderTrackingInputs() {
+  if (!$("targetInput").value.trim()) {
+    $("targetInput").value = state.snapshot.celebrities.map(item => displayName(item.name)).join(", ");
+  }
+  $("updateBtn").textContent = state.isUpdating ? "更新中..." : "更新 Snapshot";
+  $("updateBtn").disabled = state.isUpdating;
+}
+
+function renderRecentTargets() {
+  $("recentTargetsList").innerHTML = state.recentTargets.map(item =>
+    `<option value="${esc(item.name)}" label="${esc(item.company ? `${item.name} — ${item.company}` : item.name)}"></option>`
+  ).join("");
+}
+
 function currentCelebrity() {
   return state.snapshot.celebrities.find(item => item.id === state.selectedCelebrityId) || state.snapshot.celebrities[0];
 }
 
 function renderCelebritySelect() {
   $("celebritySelect").innerHTML = state.snapshot.celebrities.map(item =>
-    `<option value="${esc(item.id)}" ${item.id === state.selectedCelebrityId ? "selected" : ""}>${esc(item.name)} — ${esc(item.company)}</option>`
+    `<option value="${esc(item.id)}" ${item.id === state.selectedCelebrityId ? "selected" : ""}>${esc(entityLabel(item))}</option>`
   ).join("");
+}
+
+async function updateSnapshot() {
+  const celebrities = parseTargets($("targetInput").value);
+  if (!celebrities.length) {
+    $("sourceStatus").textContent = "請先輸入至少一位追蹤對象。";
+    return;
+  }
+
+  state.isUpdating = true;
+  state.sourceMessage = "正在抓取公開新聞並更新 snapshot...";
+  $("sourceStatus").textContent = state.sourceMessage;
+  renderTrackingInputs();
+
+  try {
+    const response = await fetch("/api/snapshot", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        days: $("daysInput").value,
+        celebrities
+      })
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(result.error || "更新失敗");
+    state.snapshot = await loadSnapshot();
+    state.sourceMessage = "";
+    saveRecentTargets(celebrities);
+    state.selectedCelebrityId = state.snapshot.celebrities[0]?.id;
+    state.selectedTrendId = null;
+    state.messages = [{ role: "bot", text: result.message || "Snapshot 已更新。你可以問我本次最高分趨勢、首次出現或資料來源。" }];
+  } catch (error) {
+    state.sourceMessage = `更新失敗：${error.message}`;
+  } finally {
+    state.isUpdating = false;
+    renderAll();
+  }
+}
+
+function parseTargets(targetText) {
+  return targetText.split(/[\s,，、;；/／|｜]+/)
+    .map(name => name.trim())
+    .filter(Boolean)
+    .filter((name, index, list) => list.findIndex(item => item.toLowerCase() === name.toLowerCase()) === index)
+    .map(name => ({
+      name,
+      company: "",
+      aliases: [name]
+    }));
+}
+
+function displayName(value) {
+  return String(value || "").split(" / ")[0].trim();
+}
+
+function entityLabel(item) {
+  return item.company && item.company !== "N/A" ? `${item.name} — ${item.company}` : item.name;
+}
+
+function loadRecentTargets() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(recentTargetsKey) || "[]");
+    return Array.isArray(stored) ? normalizeRecentTargets(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveRecentTargets(celebrities) {
+  state.recentTargets = normalizeRecentTargets([...celebrities, ...state.recentTargets]).slice(0, 5);
+  try {
+    localStorage.setItem(recentTargetsKey, JSON.stringify(state.recentTargets));
+  } catch {}
+}
+
+function normalizeRecentTargets(items) {
+  const seen = new Set();
+  return items.map(item => ({
+    name: String(item.name || "").trim(),
+    company: String(item.company || "").trim()
+  })).filter(item => item.name).map(item => ({
+    ...item,
+    key: recentTargetKey(item)
+  })).filter(item => {
+    if (seen.has(item.key)) return false;
+    seen.add(item.key);
+    return true;
+  });
+}
+
+function recentTargetKey(item) {
+  return item.name.toLowerCase();
 }
 
 function renderMetrics() {
@@ -124,9 +243,9 @@ function renderFiveP() {
   const celebrity = currentCelebrity();
   const topTrend = celebrity.trends[0]?.title || "尚無趨勢";
   const topPartners = externalPartners(celebrity).slice(0, 4).map(row => row.partner).join("、") || "尚無外部 partner";
-  const primarySignals = primarySignalsFor(celebrity).map(row => `${row.partner} ${row.mentions} 次`).join("、") || celebrity.company;
+  const primarySignals = primarySignalsFor(celebrity).map(row => `${row.partner} ${row.mentions} 次`).join("、") || entityLabel(celebrity);
   const boxes = [
-    ["Person", `${celebrity.name} / ${celebrity.company}`],
+    ["Person", entityLabel(celebrity)],
     ["Period", state.snapshot.period],
     ["Points", topTrend],
     ["Company", primarySignals],
@@ -214,7 +333,10 @@ function renderPartners() {
   $("partnerBody").innerHTML = rows.length ? rows.map(row => `
     <tr>
       <td>
-        <b>${esc(row.partner)}</b>
+        <span class="partner-hover" tabindex="0" title="${esc(marketTooltipText(row.market))}">
+          <b>${esc(row.partner)}</b>
+          ${marketTooltip(row.market)}
+        </span>
         <div class="muted">${esc(row.type)}</div>
         <div>${row.sourceTypes.map(type => `<span class="badge light">${esc(type)}</span>`).join(" ")}</div>
       </td>
@@ -227,11 +349,45 @@ function renderPartners() {
   `).join("") : `<tr><td colspan="6"><div class="empty">沒有符合條件的 partner。</div></td></tr>`;
 }
 
+function marketTooltip(market) {
+  if (!market || market.status !== "ok") {
+    return `<span class="market-tip"><b>Market data</b><span>N/A</span></span>`;
+  }
+  const price = market.price == null ? "N/A" : `${formatNumber(market.price)} ${market.currency || ""}`.trim();
+  const eps2025 = market.eps2025 == null ? "N/A" : formatNumber(market.eps2025);
+  const eps2026 = market.eps2026 == null ? "N/A" : formatNumber(market.eps2026);
+  return `
+    <span class="market-tip">
+      <b>${esc(market.symbol || "Market")}</b>
+      <span>股價 ${esc(price)}</span>
+      <span>EPS 2025 ${esc(eps2025)}</span>
+      <span>EPS 2026 ${esc(eps2026)}</span>
+    </span>
+  `;
+}
+
+function marketTooltipText(market) {
+  if (!market || market.status !== "ok") return "Market data: N/A";
+  const price = market.price == null ? "N/A" : `${formatNumber(market.price)} ${market.currency || ""}`.trim();
+  const eps2025 = market.eps2025 == null ? "N/A" : formatNumber(market.eps2025);
+  const eps2026 = market.eps2026 == null ? "N/A" : formatNumber(market.eps2026);
+  return `${market.symbol || "Market"} | 股價 ${price} | EPS 2025 ${eps2025} | EPS 2026 ${eps2026}`;
+}
+
+function formatNumber(value) {
+  return Number(value).toLocaleString("en-US", { maximumFractionDigits: 2 });
+}
+
 function renderBar(rows) {
   const max = Math.max(1, ...rows.map(row => row.mentions));
   $("barChart").innerHTML = rows.length ? rows.map(row => `
     <div class="bar-row">
-      <div class="bar-label" title="${esc(row.partner)}">${esc(row.partner)}</div>
+      <div class="bar-label">
+        <span class="partner-hover" tabindex="0" title="${esc(marketTooltipText(row.market))}">
+          <b>${esc(row.partner)}</b>
+          ${marketTooltip(row.market)}
+        </span>
+      </div>
       <div class="bar-track"><div class="bar-fill" style="width:${(row.mentions / max) * 100}%"></div></div>
       <div class="bar-value">${esc(row.mentions)}</div>
     </div>
@@ -300,7 +456,7 @@ function renderSources() {
   $("sources").innerHTML = articles.length ? articles.map(article => `
     <article class="source-card">
       <b>${esc(article.title)}</b>
-      <p>${esc(article.source)} · ${esc(formatDate(article.publishedAt))}</p>
+      <p>${esc(article.source)} · ${esc(article.sourceType || "News")} · ${esc(formatDate(article.publishedAt))}</p>
       <p><a href="${esc(article.url)}" target="_blank" rel="noreferrer">Open source</a></p>
     </article>
   `).join("") : `<div class="empty">目前沒有可顯示的來源。手動更新完成後會出現在這裡。</div>`;
