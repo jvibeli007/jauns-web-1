@@ -355,6 +355,7 @@ button {
   gap: 8px;
   margin-bottom: 14px;
   padding: 12px;
+  overflow: visible;
   background: #f8fafc;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -368,9 +369,20 @@ button {
 }
 
 .bar-label {
-  overflow: hidden;
+  min-width: 0;
   color: #475467;
   font-size: 12px;
+  white-space: nowrap;
+}
+
+.bar-label .partner-hover {
+  max-width: 100%;
+}
+
+.bar-label .partner-hover b {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -431,6 +443,54 @@ th {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.55;
+}
+
+.partner-hover {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: help;
+  outline: none;
+}
+
+.partner-hover b {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+.partner-hover:hover b,
+.partner-hover:focus b {
+  color: var(--dark);
+}
+
+.market-tip {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  z-index: 5;
+  display: none;
+  min-width: 190px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #101828;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.market-tip span {
+  display: block;
+  margin-top: 3px;
+  color: #d0d5dd;
+}
+
+.partner-hover:hover .market-tip,
+.partner-hover:focus-within .market-tip {
+  display: block;
 }
 
 .bot-grid {
