@@ -22,7 +22,17 @@
       </div>
       <div class="control-panel">
         <label>
-          追蹤對象
+          追蹤對象 / 公司
+          <input id="targetInput" list="recentTargetsList" placeholder="可輸入多個：川普 NVIDIA, OpenAI / TSMC" />
+          <datalist id="recentTargetsList"></datalist>
+        </label>
+        <label>
+          Current day - N
+          <input id="daysInput" type="number" min="1" max="30" step="1" value="2" />
+        </label>
+        <button id="updateBtn" type="button">更新 Snapshot</button>
+        <label>
+          本次結果
           <select id="celebritySelect"></select>
         </label>
         <label>
