@@ -21,7 +21,7 @@ const knownPartners = [
   "NVIDIA", "Nvidia", "AMD", "OpenAI", "Anthropic", "Microsoft", "Oracle", "Google",
   "Amazon", "AWS", "Meta", "Tesla", "TSMC", "Foxconn", "Hon Hai", "MediaTek", "MTK",
   "Dell", "Dell Technologies", "HP", "Lenovo", "ASUS", "Acer", "Quanta", "Wistron", "SoftBank",
-  "Arm", "Samsung", "Samsung Electronics", "SK hynix", "SK Group", "Hyundai",
+  "Arm", "Marvell", "Marvell Technology", "Samsung", "Samsung Electronics", "SK hynix", "SK Group", "Hyundai",
   "Hyundai Motor", "LG", "Intel", "Broadcom", "Cisco", "SpaceX", "Unitree",
   "Figure AI", "Naver", "Kakao", "Oracle Cloud", "CoreWeave"
 ];
@@ -29,7 +29,7 @@ const knownPartners = [
 const partnerSearchHints = [
   "Dell", "Dell Technologies", "MediaTek", "MTK", "HP", "Lenovo", "Microsoft",
   "Foxconn", "Hon Hai", "TSMC", "Quanta", "Wistron", "ASUS", "Acer", "CoreWeave", "Oracle",
-  "AMD", "OpenAI", "Anthropic", "Amazon", "AWS", "Google", "Meta", "Tesla", "SoftBank",
+  "AMD", "OpenAI", "Anthropic", "Amazon", "AWS", "Google", "Meta", "Tesla", "SoftBank", "Marvell", "Marvell Technology",
   "Arm", "Samsung", "SK hynix", "Intel", "Broadcom", "Cisco", "SpaceX", "Unitree", "Figure AI"
 ];
 
@@ -57,6 +57,8 @@ const marketSymbols = new Map([
   ["wistron", "3231.TW"],
   ["softbank", "9984.T"],
   ["arm", "ARM"],
+  ["marvell", "MRVL"],
+  ["marvell technology", "MRVL"],
   ["samsung", "005930.KS"],
   ["samsung electronics", "005930.KS"],
   ["sk hynix", "000660.KS"],
@@ -416,6 +418,7 @@ function normalizePartner(name) {
     .replace(/^Amd$/i, "AMD")
     .replace(/^Mtk$/i, "MediaTek")
     .replace(/^Dell Technologies$/i, "Dell")
+    .replace(/^Marvell Technology$/i, "Marvell")
     .replace(/\s+/g, " ")
     .trim();
 }
