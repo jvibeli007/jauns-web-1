@@ -405,7 +405,7 @@ function extractPartners(celebrity, text) {
 function looksLikeOrganization(phrase, celebrity) {
   if (phrase.includes(celebrity.name)) return false;
   if (phrase.split(/\s+/).length > 4) return false;
-  if (/\b(CEO|CFO|CTO|Investors|Says|Said|Just|This|Up|Down|Why|How|What|Which|After|Before|During|Called|Designing|Compares|Projects|Massive|Record|Highs|Amid)\b/i.test(phrase)) return false;
+  if (/\b(CEO|CFO|CTO|Investors|Says|Said|Just|This|Up|Down|Why|How|What|Which|After|Before|During|Called|Designing|Compares|Projects|Massive|Record|Highs|Amid|Into|With)\b/i.test(phrase)) return false;
   return /(?:^|\s)(Group|Electronics|Motor|Semiconductor|Systems|Technologies|Labs|Robotics|Capital|Foundry|Holdings)$/i.test(phrase);
 }
 
@@ -426,10 +426,13 @@ function normalizePartner(name) {
 function isNoisePartner(name, celebrity) {
   if (!name || name.length < 2) return true;
   if (mediaAndNoise.has(name)) return true;
+  if (/^(Into|With|For|From|To|At|By|And)\b/i.test(name)) return true;
+  if (/\b(with|into action with)\b/i.test(name)) return true;
   for (const noise of mediaAndNoise) {
     if (noise.length > 4 && name.toLowerCase().includes(noise.toLowerCase())) return true;
   }
   if (name === celebrity.name || name === celebrity.localName || name.includes(celebrity.name)) return true;
+  if (celebrity.company && name.toLowerCase().includes(celebrity.company.toLowerCase()) && name !== celebrity.company) return true;
   if (/[.:]/.test(name)) return true;
   if (/^(The|This|That|New|Latest|Breaking|Here|Why|How|What|Which|As|After|Before|During|CEO|CNBC|MSN|Reuters|Crypto Briefing|AI Magazine|International Business Times)\b/i.test(name)) return true;
   if (/\b(CEO|Says|Said|Just|Investors|Record|Highs|Amid|Massive|Projects|Compares)\b/i.test(name)) return true;
