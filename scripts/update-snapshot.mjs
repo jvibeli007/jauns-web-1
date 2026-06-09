@@ -77,7 +77,7 @@ const mediaAndNoise = new Set([
   "Fortune", "Forbes", "MarketWatch", "WSJ", "The Wall Street Journal", "MSN",
   "Crypto Briefing", "Benzinga", "Motley Fool", "Investopedia", "Seeking Alpha",
   "Google News", "YouTube", "LinkedIn", "GitHub", "AI Magazine", "International Business Times",
-  "HarianBasis.co", "Digital Foundry", "Quiver Quantitative", "Data Centre Magazine", "Manufacturing Digital",
+  "HarianBasis.co", "Astute Group", "Digital Foundry", "Quiver Quantitative", "Data Centre Magazine", "Manufacturing Digital",
   "Sahm", "Trefis", "Seoul", "South Korea",
   "Korea", "China", "US", "USA", "CEO", "AI", "GPU", "CPU", "PC"
 ]);
